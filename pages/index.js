@@ -12,11 +12,13 @@ export async function getStaticProps() {
 export default function Home({allData}) {
   return (
     <Layout home>
-      <div id="listOfPresidents" className="list-group">
+      <div id="micropostList" className="list-group">
         {allData && allData.map(
-          ({id, name}) => (
-            <Link key={id} href={`/${id}`} className="list-group-item list-group-item-action">
-              {name}
+          ({id, name, content, date, priority}) => (
+            <Link key={id} href={`/${id}`} className={`list-group-item list-group-item-action micropostPriority${priority}`}>
+              <p class="micropostTitle">{name}</p>
+              <p class="micropostContent">{content}</p>
+              <p class="micropostDate">{date}</p>
             </Link>
           )
         )}

@@ -19,10 +19,11 @@ export async function getStaticPaths() {
 export default function Entry( {item} ) {
   return (
     <Layout>
-      <article className="presidentInfo">
-        <h2>{item.post_title}</h2>
-        <p>Date: {item.post_date}</p>
-        {item.post_content}
+      <article className="viewMicropost">
+        <h2 class="micropostTitle">{item.post_title}</h2>
+        <p class="micropostContent">{item.content}</p>
+        <p class="micropostDate">Date: {item.date}</p>
+        <p class="micropostPostContent">{item.post_content}</p>
       </article>
     </Layout>
   );
