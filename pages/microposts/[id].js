@@ -1,6 +1,6 @@
-import Layout from '../components/layout';
-import {getAllIds} from '../lib/data';
-import {getData} from '../lib/data';
+import Layout from '../../components/layout';
+import {getAllIds} from '../../lib/data';
+import {getData} from '../../lib/data';
 
 export async function getStaticProps({params}) {
   const item = await getData(params.id);

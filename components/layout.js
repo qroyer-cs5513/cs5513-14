@@ -9,14 +9,12 @@ export default function Layout( {children, home} ) {
       </Head>
       <header>
         <h1>WordPress Data</h1>
+        <p className="navigationBar">[ <Link href="/">Microposts</Link> | <Link href="/events">Events</Link> | <Link href="/degrees">Degrees</Link> ]</p>
         <hr/>
       </header>
       <main>
         {children}
       </main>
-      {!home && (
-        <Link href="/" className="btn btn-primary mt-3">⬅ Back</Link>
-      )}
     </div>
   )
 }
